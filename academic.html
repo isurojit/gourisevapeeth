@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Courses | Gouri Sevapeeth</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <style>
+      /* --- Reusing Vibrant Theme from index.html --- */
+      :root {
+        --primary: #ff5252;
+        --secondary: #ffc107;
+        --info: #4fb6ff;
+        --dark: #37474f;
+        --light-bg: #fffbf5;
+        --soft-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+      }
+      body {
+        font-family: "Nunito", sans-serif;
+        color: var(--dark);
+        background-color: var(--light-bg);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .navbar-brand,
+      .btn {
+        font-family: "Baloo 2", cursive;
+      }
+      .section-padding {
+        padding: 80px 0;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .section-title h2 {
+        font-weight: 800;
+        font-size: 2.5rem;
+        color: var(--primary);
+      }
+
+      /* --- Navbar Styles (Same as index.html) --- */
+      .navbar {
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--soft-shadow);
+        padding: 15px 0;
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        color: var(--primary) !important;
+        font-weight: 800;
+      }
+      .nav-link {
+        font-weight: 700;
+        color: var(--dark);
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary);
+      }
+      .btn-donate {
+        background: linear-gradient(45deg, var(--primary), #ff7b7b);
+        color: white;
+        border-radius: 50px;
+        padding: 12px 35px;
+        font-weight: 800;
+        border: none;
+        transition: transform 0.3s;
+      }
+      .btn-donate:hover {
+        transform: scale(1.05);
+        color: white;
+      }
+
+      /* --- Academic Page Specific Styles --- */
+      .page-header {
+        background: linear-gradient(to right, var(--primary), var(--secondary));
+        padding: 100px 0 60px;
+        color: white;
+        text-align: center;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      .course-card-large {
+        background: white;
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: var(--soft-shadow);
+        height: 100%;
+        transition: transform 0.3s;
+      }
+      .course-card-large:hover {
+        transform: translateY(-5px);
+      }
+      .course-header {
+        padding: 30px;
+        color: white;
+        text-align: center;
+      }
+      .course-body {
+        padding: 40px;
+      }
+      .course-list li {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+      .course-list i {
+        font-size: 1.2rem;
+        margin-right: 15px;
+      }
+
+      /* Footer Styles (Same as index.html) */
+      footer {
+        background: #263238;
+        color: #b0bec5;
+        padding: 60px 0 20px;
+      }
+      footer h5 {
+        color: white;
+        margin-bottom: 20px;
+      }
+      footer a {
+        color: #b0bec5;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"
+          ><i class="fas fa-heartbeat me-2"></i>Gouri Sevapeeth</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#causes">Our Causes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="academic.html"
+                >Academic Courses</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#team">Team</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <button
+                class="btn btn-donate animate__animated animate__pulse animate__infinite"
+                data-bs-toggle="modal"
+                data-bs-target="#donateModal"
+              >
+                Donate Now <i class="fas fa-hand-holding-heart ms-2"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header animate__animated animate__fadeIn">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Nursing Training Institute</h1>
+        <p class="lead">
+          Empowering youth with healthcare skills for a better tomorrow.
+        </p>
+      </div>
+    </header>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5 col-md-6 animate__animated animate__fadeInLeft">
+            <div class="course-card-large">
+              <div class="course-header bg-primary">
+                <i class="fas fa-user-nurse fa-3x mb-3"></i>
+                <h3 class="mb-0 fw-bold">GNM</h3>
+                <p class="mb-0 opacity-75">General Nursing and Midwifery</p>
+              </div>
+              <div class="course-body">
+                <span class="badge bg-primary mb-4 px-3 py-2 rounded-pill"
+                  >Diploma Course</span
+                >
+                <ul class="list-unstyled course-list">
+                  <li>
+                    <i class="fas fa-clock text-primary"></i>
+                    <strong>Duration:</strong> 3.5 Years
+                  </li>
+                  <li>
+                    <i class="fas fa-graduation-cap text-primary"></i>
+                    <strong>Eligibility:</strong> 10+2 passed (Any Stream) with
+                    40% marks.
+                  </li>
+                  <li>
+                    <i class="fas fa-tint text-primary"></i>
+                    <strong>Focus:</strong> Comprehensive nursing care,
+                    midwifery, and community health.
+                  </li>
+                </ul>
+                <button
+                  class="btn btn-outline-primary rounded-pill w-100 mt-3 fw-bold"
+                >
+                  Download Prospectus
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 animate__animated animate__fadeInRight">
+            <div class="course-card-large">
+              <div class="course-header" style="background: var(--info)">
+                <i class="fas fa-notes-medical fa-3x mb-3"></i>
+                <h3 class="mb-0 fw-bold">ANM</h3>
+                <p class="mb-0 opacity-75">Auxiliary Nursing Midwifery</p>
+              </div>
+              <div class="course-body">
+                <span class="badge bg-info mb-4 px-3 py-2 rounded-pill"
+                  >Certificate Course</span
+                >
+                <ul class="list-unstyled course-list">
+                  <li>
+                    <i class="fas fa-clock text-info"></i>
+                    <strong>Duration:</strong> 2 Years
+                  </li>
+                  <li>
+                    <i class="fas fa-graduation-cap text-info"></i>
+                    <strong>Eligibility:</strong> 10+2 passed (Arts/Science
+                    stream).
+                  </li>
+                  <li>
+                    <i class="fas fa-tint text-info"></i>
+                    <strong>Focus:</strong> Maternal & child health, basic
+                    community health services.
+                  </li>
+                </ul>
+                <button
+                  class="btn btn-outline-info rounded-pill w-100 mt-3 fw-bold"
+                  style="color: var(--info); border-color: var(--info)"
+                >
+                  Download Prospectus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-center mt-5 animate__animated animate__fadeInUp animate__delay-1s"
+        >
+          <div class="p-4 bg-white rounded-4 shadow-sm d-inline-block">
+            <i class="fas fa-building fa-2x text-secondary mb-3"></i>
+            <h5 class="fw-bold">Campus Facilities</h5>
+            <p class="text-muted mb-0" style="max-width: 600px">
+              Our institute is equipped with modern labs, a library, and
+              experienced faculty to ensure the best training for our students.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12">
+            <h4 class="text-white mb-4">
+              <i class="fas fa-heartbeat me-2"></i>Gouri Sevapeeth
+            </h4>
+            <p>
+              Registered under West Bengal Act XXVI of 1961.<br />ISO 9001:2015
+              Certified Institute.
+            </p>
+            <p>
+              <i class="fas fa-map-marker-alt text-primary me-2"></i> 16/1/H/15
+              B.B. Ghosh Sarani, Kolkata-700 067
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="academic.html">Academic Courses</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="d-flex align-items-center bg-dark p-3 rounded mt-4">
+              <i class="fas fa-hand-holding-usd fa-2x text-warning me-3"></i>
+              <small
+                >Donations eligible for tax exemption u/s
+                <strong>80 (G)</strong>.</small
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-center mt-5 pt-4 border-top border-secondary text-muted"
+        >
+          <small>&copy; 2024 Gouri Sevapeeth. All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 overflow-hidden">
+          <div class="modal-header bg-primary text-white p-4">
+            <h5 class="modal-title fw-bold">
+              <i class="fas fa-gift me-2"></i>Make a Contribution
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4 bg-light-bg">
+            <p class="text-center mb-4 text-muted">
+              Please use the UCO Bank details below for NEFT/RTGS transfers.
+            </p>
+            <div
+              class="bg-white p-4 rounded-4 shadow-sm border-start border-5 border-primary"
+            >
+              <div class="row mb-2">
+                <div class="col-4 fw-bold text-secondary">Bank:</div>
+                <div class="col-8">UCO Bank</div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-4 fw-bold text-secondary">Branch:</div>
+                <div class="col-8">Manicktala Branch</div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-4 fw-bold text-secondary">Saving A/C:</div>
+                <div class="col-8 text-primary fw-bold font-monospace fs-5">
+                  17140100002672
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-4 fw-bold text-secondary">Current A/C:</div>
+                <div class="col-8 text-primary fw-bold font-monospace fs-5">
+                  17140210000618
+                </div>
+              </div>
+              <div class="row mb-2">
+                <div class="col-4 fw-bold text-secondary">IFSC:</div>
+                <div class="col-8 font-monospace">UCBA0000585</div>
+              </div>
+              <div class="row">
+                <div class="col-4 fw-bold text-secondary">Address:</div>
+                <div class="col-8 small">
+                  Manicktala Main Road, Kolkata – 700054
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
